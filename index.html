@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Formulaire</title>
+	<link href="styles/main.css" rel="stylesheet">
+	<link rel="icon" href="img/icon.png"> </head>
+
+<body>
+	<div class="flex-column">
+		<!--Header (Début)-->
+		<header>
+			<div class="header">
+				<div class="flex-column">
+					<h1>Bienvenue</h1>
+					<p>Voici le formulaire de l'inventaire.</p>
+				</div>
+			</div>
+		</header>
+		<!-- Header (Fin) -->
+		<!-- Formulaire (Début) -->
+		<form method="GET" name="form" id="form" onsubmit="formulaire(); return false">
+			<h2>Nouvel Inventaire</h2>
+			<h3>Personne concernée</h3>
+			<div class="flex-column personneConcernee">
+				<div class="flex-column">
+					<input type="text" placeholder="Nom de la personne..." id="nom" name="nom">
+					<div id="erreurNom" class="erreur"></div>
+				</div>
+				<div class="flex-column">
+					<input type="text" placeholder="Prénom de la personne..." id="prenom" name="prenom">
+					<div id="erreurPrenom" class="erreur"></div>
+				</div>
+				<div class="flex-column">
+					<select name="poste" id="poste">
+						<option value="">Poste...</option>
+						<option value="PDG">PDG</option>
+						<option value="Assistante de direction">Assistante de direction</option>
+						<option value="Directeur commercial">Directeur commercial</option>
+						<option value="Directeur technique">Directeur technique</option>
+						<option value="Directeur financier">Directeur Financier</option>
+						<option value="Commercial">Commercial</option>
+						<option value="Développeur">Développeur</option>
+						<option value="Comptable">Comptable</option>
+					</select>
+					<div id="erreurPoste" class="erreur"></div>
+				</div>
+			</div>
+			<h3>Matériel</h3>
+			<div class="flex-column configInput">
+				<div class="flex">
+					<p>Type de matériel : </p>
+					<div class="flex-column">
+						<div class="typeMatElements">
+							<div class="flex-column">
+								<div id="typeMat">
+									<input type="radio" name="typeMat" id="bureau" value="Bureau">
+									<label for="bureau">Bureau</label>
+									<input type="radio" name="typeMat" id="portable" value="Portable">
+									<label for="portable">Portable</label>
+								</div>
+								<div id="erreurType" class="erreur"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="flex-column">
+				    <input type="text" name="modele" placeholder="Modèle" id="modele">
+                    <div id="erreurModele" class="erreur"></div>
+                </div>
+            </div>
+			<div class="flex-column configInput">
+				<div class="flex">
+					<p>Système d'exploitation : </p>
+                    <div class="flex-column">
+                        <div class="seElements" id="se">
+                            <input type="radio" name="seMat" id="windows10" value="Windows 10">
+                            <label for="windows10">Windows 10</label>
+                            <input type="radio" name="seMat" id="windows11" value="Windows 11">
+                            <label for="windows11">Windows 11</label>
+                        </div>
+                        <div id="erreurSe" class="erreur"></div>
+                    </div>
+				</div>
+			</div>
+			<div class="flex-column">
+                <div class="flex-column">
+                    <select name="proc" id="proc" class="configSelect">
+                        <option value="">Processeur...</option>
+                        <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+                        <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+                        <option value="Intel Core i3">Intel Core i3</option>
+                        <option value="Intel Core i5">Intel Core i5</option>
+                    </select>
+                    <div id="erreurProc" class="erreur"></div>
+                </div>
+                <div class="flex-column">
+                    <select name="ram" id="ram" class="configSelect">
+                        <option value="">RAM...</option>
+                        <option value="16 Go">16 Go</option>
+                        <option value="8 Go">8 Go</option>
+                        <option value="4 Go">4 Go</option>
+                    </select>
+                    <div id="erreurRam" class="erreur"></div>
+                </div>
+                <div class="flex-column">
+                    <select name="dd" id="dd" class="configSelect">
+                        <option value="">Disque de Stockage...</option>
+                        <option value="1 To SSD">1 To Disque SSD</option>
+                        <option value="1 To HDD">1 To HDD</option>
+                        <option value="512 Go Disque SSD">512 Go Disque SSD</option>
+                        <option value="500 Go HDD">500 Go HDD</option>
+                        <option value="256 Go Disque SSD">256 Go Disque SSD</option>
+                    </select>
+                    <div id="erreurDd" class="erreur"></div>
+                </div>
+                <div class="flex-column">
+                    <select name="ecran" id="ecran" class="configSelect">
+                        <option value="">Ecran...</option>
+                        <option value='21" FHD'>21" FHD</option>
+                        <option value='19" FHD'>19" FHD</option>
+                        <option value='17" FHD'>17" FHD</option>
+                        <option value='15.6" FHD'>15.6" FHD</option>
+                        <option value='14" FHD'>14" FHD</option>
+                        <option value='14" HD'>14" HD</option>
+                        <option value='13,3" FHD'>13,3" FHD</option>
+                    </select>
+                    <div id="erreurEcran" class="erreur"></div>
+                </div>
+                <div class="flex-column">
+                    <select name="cg" id="cg" class="configSelect">
+                        <option value="">Carte Graphique...</option>
+                        <option value="Carte graphique AMD Radeon">Carte graphique AMD Radeon</option>
+                        <option value="Carte graphique Intel UHD">Carte graphique Intel UHD</option>
+                        <option value="Carte graphique Intel UHD 630">Carte graphique Intel UHD 630</option>
+                    </select>
+                    <div id="erreurCg" class="erreur"></div>
+                </div>
+				<div class="flex-column">
+					<input type="submit" name="submit" id="submit" value="Envoyer les données" class="configSelect">
+					<div id="erreurSubmit" class="erreur"></div>
+					<input type="submit" name="submit2" id="submit2" value="Télécharger" class="configSelect">
+				</div>
+			</div>
+            <div class="recap">
+                <p>
+                    Personne concernée :
+                    <span class="recapEach">
+                        <span id="recapNom"></span>
+                        <span id="recapPrenom"></span>
+                        <span id="recapPoste"></span>
+                    </span>
+                </p>
+                <p>
+                    Matériel : 
+                    <span class="recapEach">
+                        <span id="recapMat"></span>
+                    </span>
+                </p>
+                <p>
+                    Modèle :
+                    <span class="recapEach">
+                        <span id="recapModele"></span>
+                    </span>
+                </p>
+                <p>
+                    SE :
+                    <span class="recapEach">
+                        <span id="recapSe"></span>
+                    </span>
+                </p>
+                <p>
+                    Proc :
+                    <span class="recapEach">
+                        <span id="recapProc"></span>
+                    </span>
+                </p>
+                <p>
+                    RAM :
+                    <span class="recapEach">
+                        <span id="recapRam"></span>
+                    </span>
+                </p>
+                <p>
+                    DD :
+                    <span class="recapEach">
+                        <span id="recapDd"></span>
+                    </span>
+                </p>
+                <p>
+                    Ecran :
+                    <span class="recapEach">
+                        <span id="recapEcran"></span>
+                    </span>
+                </p>
+                <p>
+                    Carte Graphique : 
+                    <span class="recapEach">
+                        <span id="recapCg"></span>
+                    </span>
+                </p>
+            </div>
+		</form>
+		<!-- Formulaire (Fin) -->
+	</div>
+	<script src="js/erreurForm.js"></script>
+</body>
+
+</html>

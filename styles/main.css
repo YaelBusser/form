@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'font1';
+    src: url('../fonts/Aaargh-webfont.eot');
+    src: url('../fonts/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Aaargh-webfont.woff2') format('woff2'),
+         url('../fonts/Aaargh-webfont.woff') format('woff'),
+         url('../fonts/Aaargh-webfont.ttf') format('truetype'),
+         url('../fonts/Aaargh-webfont.svg#aaarghnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'font2';
+    src: url('../fonts/abel-regular-webfont.eot');
+    src: url('../fonts/abel-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abel-regular-webfont.woff2') format('woff2'),
+         url('../fonts/abel-regular-webfont.woff') format('woff'),
+         url('../fonts/abel-regular-webfont.ttf') format('truetype'),
+         url('../fonts/abel-regular-webfont.svg#abelregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #37e1cf;
+    overflow-x: hidden;
+}
+.header{
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1000px;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    background-color: white;
+}
+.header h1{
+    font-size: 75px;
+    font-family: font1;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header p{
+    font-family: font2;
+    font-size: 30px;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+}
+form{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    width: 1000px;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    margin-bottom: 200px;
+    background-color: white;
+}
+.flex{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+form h2{
+    font-size: 50px;
+    font-family: font1;
+    padding: 50px;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #37e1cf;
+    color: white;
+}
+h3{
+    font-size: 40px;
+    font-family: font1;
+    padding: 50px;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #37e1cf;
+    color: white;
+}
+p{
+    font-size: 25px;
+    font-family: font2;
+}
+.personneConcernee{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    overflow: hidden;
+}
+::placeholder{
+    font-family: arial;
+    color: grey;
+    text-align: center;
+    font-size: 15px;
+}
+input{
+    text-align: center;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius:  3px 3px 3px 3px;
+    transition: all 0.5s ease-out;
+}
+input:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+input[type="submit"]{
+    cursor: pointer;
+    background-color: #37e1cf;
+    transition: all 0.5s ease-out;
+    width: 250px;
+    padding: 25px;
+    border: 0;
+    border-radius: 20px 20px 20px 20px;
+    color: white;
+    font-family: Arial;
+}
+input[type="submit"]:hover{
+    background-color: rgba(55,225,207,0.5);
+}
+select{
+    text-align: center;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius:  3px 3px 3px 3px;
+    transition: all 0.5s ease-out;
+}
+select:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+.configInput{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.configSelect{ 
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.typeMatElements{
+    font-size: 18px;
+    font-family: font2;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.seElements{
+    font-size: 18px;
+    font-family: font2;
+    padding-top: 30px;
+    padding-left: 5px;
+}
+select option{
+    font-family: arial;
+    font-size: 13px;
+}
+.erreur{
+    border-radius: 10px 10px 10px 10px;
+    color: red;
+    font-family: arial;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.img-error{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+.recap p{
+    font-size: 20px;
+    font-family: arial;
+}
+.recap{
+    background-color: #37e1cf;
+    color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: 30px;
+}
+.recapEach{
+    color: rgb(25, 109, 116);
+    font-size: 18px;
+}
